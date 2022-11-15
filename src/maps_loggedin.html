@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title> Nearby carpark</title>
+    <link rel="stylesheet" href="project.css" />
+
+    <div class="dropdown">
+      <button onclick="dropdownfunc()" class="dropbtn">Menu </button>
+      <div id="myDropdown" class="dropdown-content">
+        <a href="index_loggedin.html">Search</a>
+        <a href="userAccountPage.html">Account</a>
+        <a href="userLogin.html" id="SignOut">Sign Out</a>
+      </div>
+    </div>
+
+
+    <style>
+      #map {
+        height: 600px;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>EZPARK</h1>
+
+    <button onclick="location.href='index_loggedin.html'">Back to search</button>
+    <div id="map">
+      <script src="system.js"></script>
+    </div>
+
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDPXWT4iTaB2hL_E-NAiMROYvxEJAptfM&callback=calculateDistance"// will call the setup funtion
+    ></script>
+
+    <script src="/dist/maps_user.js"></script>
+
+    <script src="dropDownMenu.js"></script>
+
+    <script src="/dist/logOut.js"></script>
+
+  </body>
+</html>

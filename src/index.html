@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enter Postal Code</title>
+    <link rel="stylesheet" href="project.css" />
+
+    <div class="dropdown">
+      <button onclick="dropdownfunc()" class="dropbtn">Menu</button>
+      <div id="myDropdown" class="dropdown-content">
+        <a href="index.html">Home</a>
+        <a href="userLogin.html">Login</a>
+        <a href="createAcc.html">Sign Up</a>
+      </div>
+    </div>
+  </head>
+
+  <body>
+    <h1>EZPARK</h1>
+    <p class="search_field" id="NoResult"></p>
+    <div class="search_field">
+      <form action="javascript:getcarparkinfo()">
+        <p>
+          <label for="username"></label>
+
+          <input
+            id="location-input"
+            type="text"
+            placeholder="Enter postal code:"
+            name="postal code"
+            minlength="6"
+            maxlength="6"
+            pattern="(?=(?:[0-8]){1})(?=(?:[1-9]){1})(?=(?:\D*\d){4}).*"
+            title="Invalid Postal Code"
+            required
+          />
+        </p>
+        <div class="search_field">
+          <button id = "searchBtn">Search</button>
+        </div>
+      </form>
+    </div>
+    <section class="mission">
+      <h2>Our Mission</h2>
+      <p>
+        The project's aims to ensure drivers can openly compare carpark rates
+        and check for lot availability, to save
+      </p>
+      <p>their time as well as money.</p>
+    </section>
+    <script src="dropDownMenu.js"></script>
+    <script src="api.js"></script>
+  </body>
+</html>
